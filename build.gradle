@@ -1,7 +1,16 @@
 apply plugin: 'java'
 
+group = 'com.example'
+version = '1.5'
+
 repositories{
     mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Example App', 'Implementation-Version': version
+    }
 }
 
 dependencies{
